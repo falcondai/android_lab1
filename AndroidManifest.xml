@@ -19,7 +19,9 @@
             </intent-filter>
         </activity>
         
-        <activity android:name="HelloWorld" android:debuggable="true"></activity>
+        <activity android:name="HelloWorldActivity" android:debuggable="true"></activity>
+        
+        <activity android:name="SensorStatusActivity" android:debuggable="true"></activity>
         
     </application>
 

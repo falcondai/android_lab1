@@ -3,12 +3,12 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent" >
 
-
-
     <LinearLayout
         android:id="@+id/linearLayout1"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="@dimen/ng_margin"
         android:orientation="vertical" >
         
         <TextView
@@ -21,6 +21,7 @@
             android:id="@+id/editText1"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="@dimen/name_box_margin"
             android:hint="@string/hint"
             android:inputType="textPersonName" >
 
@@ -29,31 +30,18 @@
 
         <Button
             android:id="@+id/button1"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/name_box_margin"
             android:text="submit" />
 
-        <TextView
-            android:id="@+id/sensor_banner"
-            android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Accelerometer Status:"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
-
-        <TextView
-            android:id="@+id/acc_x"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:id="@+id/acc_y"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:id="@+id/acc_z"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_margin="@dimen/name_box_margin"
+            android:text="accelerometer status" />
         
     </LinearLayout>
 

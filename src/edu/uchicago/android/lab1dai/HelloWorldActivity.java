@@ -5,8 +5,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
 
-public class HelloWorld extends Activity {
-	private static final String TAG = "HelloWorld"; 
+public class HelloWorldActivity extends Activity {
+	private static final String TAG = "HelloWorldActivity"; 
 	private String name = "";
 	private TextView tv;
 	
