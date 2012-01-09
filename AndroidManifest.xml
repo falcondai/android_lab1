@@ -5,6 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk android:minSdkVersion="7" />
+    <uses-feature></uses-feature>
 
     <application
         android:icon="@drawable/ic_launcher"
@@ -21,8 +22,7 @@
         
         <activity android:name="HelloWorldActivity" android:debuggable="true"></activity>
         
-        <activity android:name="SensorStatusActivity" android:debuggable="true"></activity>
-        
+        <activity android:name="SensorActivity" android:debuggable="true"></activity>
     </application>
 
 </manifest>
