@@ -23,13 +23,12 @@
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content" />
 		
-	<TextView
+    <!-- set delay switch 
+    <TextView
 		android:id="@+id/data"
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
 		android:text="Sensor Delay " />
-		
-    <!-- set delay switch 
     <RadioGroup android:id="@+id/radioGroup1" android:layout_width="wrap_content" android:layout_height="wrap_content">
     	<RadioButton android:layout_width="wrap_content" android:id="@+id/normal" android:text="RadioButton" android:layout_height="wrap_content" android:checked="true"></RadioButton>
         <RadioButton android:layout_width="wrap_content" android:id="@+id/ui" android:text="RadioButton" android:layout_height="wrap_content"></RadioButton>
