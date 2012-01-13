@@ -11,46 +11,49 @@ import android.widget.TextView;
 
 public class SensorActivity extends Activity implements SensorEventListener{
 	public static final String TAG = "SensorActivity";
-	
+
 	private SensorManager sm;
 	private Sensor s;
-	
+
 	//to calculate update frequency
 	private long previousTime;
-	
+
 	//	TODO implements delay switch 
-	
+
 	//UI components
 	private TextView data;
 	private TextView rate;
-	
+
+	@Override
 	public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        
-        //Initialize UI
-        setContentView(R.layout.sensor);
-        data = (TextView)this.findViewById(R.id.data);
-        rate = (TextView)this.findViewById(R.id.rate);
-        
-        sm = (SensorManager)getSystemService(SENSOR_SERVICE);
-        Log.d(TAG, sm.toString());
-        s = sm.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
-        Log.d(TAG, s.toString());
+		super.onCreate(savedInstanceState);
+
+		//Initialize UI
+		setContentView(R.layout.sensor);
+		data = (TextView)this.findViewById(R.id.data);
+		rate = (TextView)this.findViewById(R.id.rate);
+
+		sm = (SensorManager)getSystemService(SENSOR_SERVICE);
+		Log.d(TAG, sm.toString());
+		s = sm.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+		Log.d(TAG, s.toString());
 	}
 
+	@Override
 	protected void onResume() {
 		super.onResume();
 		sm.registerListener(this, s, SensorManager.SENSOR_DELAY_FASTEST);
 	}
-	
+
+	@Override
 	protected void onPause() {
 		super.onPause();
 		sm.unregisterListener(this);
 	}
-	
+
 	public void onAccuracyChanged(Sensor sensor, int accuracy) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	public void onSensorChanged(SensorEvent event) {
@@ -65,7 +68,7 @@ public class SensorActivity extends Activity implements SensorEventListener{
 				);
 		//display sensor event frequency
 		rate.setText(this.getString(R.string.rate)
-				+Float.toString(1e9f/(float)(event.timestamp-previousTime))+"Hz");
+				+Float.toString(1e9f/(event.timestamp-previousTime))+"Hz");
 		previousTime = event.timestamp;
 	}
 }

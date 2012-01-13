@@ -17,6 +17,7 @@ public class NameGetterActivity extends Activity
 	private Button submit_btn;
 	private Button test_btn;
 	
+	@Override
 	public void onCreate(Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
